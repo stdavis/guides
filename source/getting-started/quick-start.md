@@ -18,10 +18,8 @@ manager. Type this into your terminal:
 npm install -g ember-cli
 ```
 
-Don't have npm? [Learn how to install Node.js and npm here][npm].
+Don't have npm? [Learn how to install Node.js and npm here](https://docs.npmjs.com/getting-started/installing-node).
 For a full list of dependencies necessary for an Ember CLI project, consult our [Installing Ember](../../getting-started/) guide.
-
-[npm]: https://docs.npmjs.com/getting-started/installing-node
 
 ## Create a New Application
 
@@ -149,18 +147,14 @@ export default Route.extend({
 });
 ```
 
-(This code example uses the latest features in JavaScript, some of which
+*Note* This code example uses the latest features in JavaScript, some of which
 you may not be familiar with. Learn more with this [overview of the
-newest JavaScript features][es6-bullet-points].)
-
-[es6-bullet-points]: https://ponyfoo.com/articles/es6
+newest JavaScript features](https://ponyfoo.com/articles/es6).
 
 In a route's `model()` method, you return whatever data you want to make
 available to the template. If you need to fetch data asynchronously, the
 `model()` method supports any library that uses [JavaScript
-Promises][promises].
-
-[promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 Now let's tell Ember how to turn that array of strings into HTML. Open
 the `scientists` template and add some Handlebars code to loop through the
@@ -312,13 +306,12 @@ directory.
 The Ember community values collaboration and building common tools that
 everyone relies on. If you're interested in deploying your app to
 production in a fast and reliable way, check out the [Ember CLI
-Deploy][ember-deploy] addon.
-
-[ember-deploy]: http://ember-cli-deploy.com/
+Deploy](http://ember-cli-deploy.com/) addon.
 
 If you deploy your application to an Apache web server, first create a new virtual host for the application.
 To make sure all routes are handled by index.html,
-add the following directive to the application's virtual host configuration
+add the following directive to the application's virtual host configuration:
+
 ```
 FallbackResource index.html
 ```
