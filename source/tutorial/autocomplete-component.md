@@ -441,9 +441,13 @@ We force the action by generating a `keyUp` event on our input field, and then a
 test('should update with matching listings', function (assert) {
   this.on('filterByCity', (val) => {
     if (val === '') {
-      return RSVP.resolve({ results: ITEMS });
+      return RSVP.resolve({
+        query: val,
+        results: ITEMS });
     } else {
-      return RSVP.resolve({ results: FILTERED_ITEMS, query: val });
+      return RSVP.resolve({
+        query: val,
+        results: FILTERED_ITEMS });
     }
   });
 
